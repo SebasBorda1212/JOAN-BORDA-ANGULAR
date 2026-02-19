@@ -1,0 +1,22 @@
+.card {
+  background: #0f0f0f;
+  color: white;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 0, 0, 0.2);
+  transition: all 0.4s ease;
+}
+
+.card:hover {
+  box-shadow: 0 20px 40px rgba(255, 0, 0, 0.4);
+}
+
+input, textarea {
+  background: #1a1a1a;
+  color: white;
+  border: 1px solid #333;
+}
+
+input:focus, textarea:focus {
+  border-color: red;
+  box-shadow: 0 0 10px rgba(255, 0, 0, 0.7);
+}
