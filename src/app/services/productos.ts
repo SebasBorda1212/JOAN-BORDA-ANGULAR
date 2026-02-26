@@ -22,7 +22,7 @@ export class ProductosService {
       precio: 800000,
       meses: 48,
       descripcion: 'Financiación flexible a largo plazo.',
-      imagen: '/basico.jpg',
+      imagen: '/R1.jpg',
       destacado: false
     },
     {
