@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ProductosService, Plan } from '../../services/productos';
+import { ProductosService } from '../../services/productos';
 
 @Component({
   selector: 'app-planes',
@@ -11,10 +11,10 @@ import { ProductosService, Plan } from '../../services/productos';
 })
 export class Planes {
 
-  planes: Plan[] = [];
+  planes: any[] = [];
 
   constructor(private productosService: ProductosService) {
-    this.planes = this.productosService.getPlanes();
+    this.planes = this.productosService.obtenerPlanes();
   }
 
 }

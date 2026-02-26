@@ -3,15 +3,15 @@
 
   <div class="row text-center">
 
-    <div class="col-md-4 mb-4" *ngFor="let plan of planes">
+    <div class="col-md-4" *ngFor="let plan of planes">
       <div class="card shadow p-4 h-100"
            [ngClass]="{'border-danger': plan.destacado}">
 
         <img [src]="plan.imagen" class="img-fluid mb-3 rounded" alt="plan">
 
         <h4 class="text-danger">{{ plan.nombre }}</h4>
-        <p>{{ plan.descripcion }}</p>
         <h2 class="fw-bold">${{ plan.precio }}</h2>
+        <p>Cuota mensual</p>
         <p>{{ plan.meses }} meses</p>
 
         <button
