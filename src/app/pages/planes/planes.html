@@ -3,33 +3,23 @@
 
   <div class="row text-center">
 
-    <div class="col-md-4">
-      <div class="card shadow p-4 h-100">
-        <h4 class="text-danger">Plan Básico</h4>
-        <h2 class="fw-bold">$800.000</h2>
-        <p>Cuota mensual</p>
-        <p>48 meses</p>
-        <button class="btn btn-outline-danger w-100">Solicitar</button>
-      </div>
-    </div>
+    <div class="col-md-4 mb-4" *ngFor="let plan of planes">
+      <div class="card shadow p-4 h-100"
+           [ngClass]="{'border-danger': plan.destacado}">
 
-    <div class="col-md-4">
-      <div class="card shadow p-4 h-100 border-danger">
-        <h4 class="text-danger">Plan Premium</h4>
-        <h2 class="fw-bold">$1.200.000</h2>
-        <p>Cuota mensual</p>
-        <p>36 meses</p>
-        <button class="btn btn-danger w-100">Solicitar</button>
-      </div>
-    </div>
+        <img [src]="plan.imagen" class="img-fluid mb-3 rounded" alt="plan">
 
-    <div class="col-md-4">
-      <div class="card shadow p-4 h-100">
-        <h4 class="text-danger">Plan Elite</h4>
-        <h2 class="fw-bold">$1.800.000</h2>
-        <p>Cuota mensual</p>
-        <p>24 meses</p>
-        <button class="btn btn-outline-danger w-100">Solicitar</button>
+        <h4 class="text-danger">{{ plan.nombre }}</h4>
+        <p>{{ plan.descripcion }}</p>
+        <h2 class="fw-bold">${{ plan.precio }}</h2>
+        <p>{{ plan.meses }} meses</p>
+
+        <button
+          class="w-100"
+          [ngClass]="plan.destacado ? 'btn btn-danger' : 'btn btn-outline-danger'">
+          Solicitar
+        </button>
+
       </div>
     </div>
 
