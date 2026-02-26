@@ -7,9 +7,27 @@ export class ProductosService {
 
   obtenerPlanes() {
     return [
-      { nombre: 'Plan Básico', precio: 800000, meses: 48, destacado: false },
-      { nombre: 'Plan Premium', precio: 1200000, meses: 36, destacado: true },
-      { nombre: 'Plan Elite', precio: 1800000, meses: 24, destacado: false }
+      {
+        nombre: 'Plan Básico',
+        precio: 800000,
+        meses: 48,
+        destacado: false,
+        imagen: '/public/basico.jpg'
+      },
+      {
+        nombre: 'Plan Premium',
+        precio: 1200000,
+        meses: 36,
+        destacado: true,
+        imagen: '/premium.jpg'
+      },
+      {
+        nombre: 'Plan Elite',
+        precio: 1800000,
+        meses: 24,
+        destacado: false,
+        imagen: '/elite.jpg'
+      }
     ];
   }
 
